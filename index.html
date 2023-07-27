@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Income and Expense App</title>
+  <link rel="shortcut icon"
+    href= "images/iconn.png"
+    type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="header">
+    <h1>Income and Expense Calculator</h1>
+  </div>
+  <div class="container">
+    <!-- greetings -->
+    <h3 class="greet">
+      Welcome,
+      <input id="user-input" type="text" placeholder="Please Enter Your Name..." />
+    </h3>
+    <!-- Form1 Area -->
+    <form>
+      <div class="double">
+        <div class="form-field">
+          <label >Transaction Name:</label>
+          <input id="name-input" type="text" />
+        </div>
+        <p>||</p>
+        <div class="form-field">
+          <label>Value:</label>
+          <input id="value-input" type="number" />
+        </div>
+      </div>
+      <!-- Form2 Area -->
+      <div class="check">
+        <div class="form-check-field">
+          <div class="checkbox-container">
+            <input id="income-check" type="checkbox" checked />
+            <label for="income-check">Income</label>
+          </div>
+          <div class="checkbox-container">
+            <input id="expense-check" type="checkbox" />
+            <label for="expense-check">Expense</label>
+          </div>
+        </div>
+        <button id="add-btn">Add</button>
+      </div>
+    </form>
+    <!-- Summation Area -->
+    <div class="sum">
+      Total: &nbsp;
+      <span id="sum-info">0</span> &#x20BA;
+    </div>
+    <!-- Filter Area -->
+    <select>
+      <option value="all">All</option>
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <!-- List-->
+    <div id="list"></div>
+    <!-- Animation -->
+    <div class="col-2">
+      <div class="ring">
+        <span></span>
+      </div>
+      <div class="ring2">
+        <span></span>
+      </div>
+      <div class="ring3">
+        <span></span>
+      </div>
+      <div class="ring4">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

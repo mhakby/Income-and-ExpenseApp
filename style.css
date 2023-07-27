@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: url(images/background.png);
+    background-size: 100% 100%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    overflow: hidden;
+    font-family: 'Lora', serif;
+}
+
+.header {
+    color: white;
+    text-shadow: 2px 2px 30px rgb(0, 0, 0);
+    letter-spacing: 1px;
+    font-family: 'Lora', serif;
+}
+
+.container {
+    min-width: 50vw;
+    max-width: 80vw;
+    height: 80vh;
+    background: rgb(253, 249, 249);
+    padding: 40px 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.454);
+}
+
+.greet {
+    font-size: 25px;
+}
+
+#user-input {
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    height: 23px;
+    width: 20vw;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.double {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 40px;
+    font-size: 20px;
+}
+
+input {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.check {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+.form-check-field {
+    gap: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    gap: 5px;
+}
+
+#add-btn {
+    background: goldenrod;
+    font-size: medium;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.sum {
+    background-color: rgb(65, 65, 97);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#sum-info {
+    color: rgb(252, 252, 3);
+}
+
+select {
+    width: 30%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 30px;
+    overflow: auto;
+    padding: 10px;
+    height: 100%;
+}
+
+/* Expense items style */
+.expense {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+    /* https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.expense .price {
+    color: red;
+}
+
+.expense .btns img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* Income items style */
+
+.income {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+    /* https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.income .price {
+    color: green;
+}
+
+.income .btns img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+/* Animations */
+.col-2 .ring:before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    border: 3px solid #fff12e;
+    z-index: -1;
+    animation: returncircle 10s linear infinite;
+}
+
+.col-2 .ring2:before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    border: 3px solid #fff12e;
+    z-index: -1;
+    animation: returncircle2 10s linear infinite;
+}
+
+.col-2 .ring3:before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 67.3%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    border: 3px solid #fff12e;
+    z-index: -1;
+    animation: returncircle 10s linear infinite;
+}
+
+.col-2 .ring4:before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 67.3%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    border: 3px solid #fff12e;
+    z-index: -1;
+    animation: returncircle2 10s linear infinite;
+}
+
+@keyframes returncircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes returncircle2 {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .col-2 .ring:before {
+        top: 7%;
+        left: 14%;
+    }
+    
+    .col-2 .ring2:before {
+        top: 7%;
+        left: 14%;
+    }
+    
+    .col-2 .ring3:before {
+        top: 7%;
+        left: 83%;
+    }
+    
+    .col-2 .ring4:before {
+        top: 7%;
+        left: 83%;
+    }
+
+    #user-input {
+        font-size: 15px;
+        width: 24vw;
+    }
+
+    select option{
+        font-size: 9px;
+    }
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 428px){
+    .header{
+        font-size: 8px;
+        margin-top: 33px;
+    }
+
+    .col-2 .ring:before {
+        top: 7%;
+        left: 9%;
+        height: 15px;
+        width: 15px;
+    }
+    
+    .col-2 .ring2:before {
+        top: 7%;
+        left: 9%;
+        height: 15px;
+        width: 15px;
+    }
+    
+    .col-2 .ring3:before {
+        top: 7%;
+        left: 86%;
+        height: 15px;
+        width: 15px;
+    }
+    
+    .col-2 .ring4:before {
+        top: 7%;
+        left: 86%;
+        height: 15px;
+        width: 15px;
+    }
+    
+    .container{
+        width: 90vw;
+        gap: 10px;
+        padding: 20px 30px;
+    }
+
+    .greet{
+        font-size: small;
+    }
+
+    #user-input {
+        font-size: 10px;
+        height: 1px;
+        width: 40vw;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .form-field{
+        font-size: 12px;
+    }
+    .checkbox-container{
+        font-size: 10px;
+    }
+
+    #add-btn{
+        font-size: 10px;
+    }
+    .sum{
+        font-size: 10px;
+    }
+    
+    #name-input{
+        width: 80px;
+    }
+
+    #value-input{
+        width: 80px;
+    }
+
+    select{
+        font-size: 9px;
+    }
+
+    select option{
+        font-size: 8px;
+    }
+
+
+}
+    
